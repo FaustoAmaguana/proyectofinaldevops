@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: proyectofinaldevops 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: proyectofinaldevops
+  template:
+    metadata:
+      labels:
+        app: proyectofinaldevops 
+    spec:
+      containers:
+        - name: proyectofinaldevops 
+          image: cicdimagenesupsf.azurecr.io/proyectofinaldevops
+          ports:
+          - containerPort: 80
